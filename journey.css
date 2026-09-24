@@ -382,3 +382,35 @@
 @media (prefers-reduced-motion: reduce) {
   .cinematic-route > div > i { animation: none; }
 }
+
+/* Performance overlay */
+.performance-overlay {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: 'Barlow Condensed', monospace;
+  font-size: 12px;
+  color: #e0e0e0;
+  pointer-events: none;
+  min-width: 140px;
+}
+.perf-row { display: flex; justify-content: space-between; gap: 12px; padding: 2px 0; }
+.perf-label { color: #999; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+.perf-value { color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* Settings improvements */
+.gfx-section { margin-bottom: 16px; }
+.gfx-section-title { font-size: 11px; color: var(--gold); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.gfx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.gfx-select { width: 100%; padding: 8px 12px; background: #1a241d; border: 1px solid #3a4a3a; color: #e0d9c0; font-size: 12px; cursor: pointer; }
+.gfx-select:focus { border-color: var(--gold); outline: none; }
+.gfx-presets { display: flex; gap: 6px; margin-bottom: 16px; }
+.gfx-preset-btn { flex: 1; padding: 8px; border: 1px solid #3a4a3a; background: transparent; color: #a0a0a0; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.2s; }
+.gfx-preset-btn:hover, .gfx-preset-btn.active { border-color: var(--gold); color: var(--gold-light); background: rgba(199, 169, 118, 0.08); }
+.gfx-warning { padding: 8px 12px; background: rgba(255, 200, 60, 0.08); border: 1px solid rgba(255, 200, 60, 0.2); color: #e8c864; font-size: 11px; margin-top: 8px; border-radius: 2px; }
